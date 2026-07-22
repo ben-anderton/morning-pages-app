@@ -1,0 +1,32 @@
+/* This is the style sheet for the Main Page */
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+}
+
+/* General Section Layout */
+.read, .ask, .pray {
+    padding: 25px;
+    padding-left: 45px;
+    padding-right: 45px;
+    min-height: 50px;
+    min-width: 250px;
+    max-width: 650px;
+}
+
+/* Date */
+
+.date-header {
+    font-size:xx-large;
+    font-weight: 700;
+    padding: 15px;
+    padding-left: 45px;
+    padding-right: 45px;
+    min-height: 50px;
+    min-width: 250px;
+    max-width: 650px;
+}
