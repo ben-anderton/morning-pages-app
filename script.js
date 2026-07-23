@@ -22,11 +22,17 @@ const askBoxOne = document.getElementById("ask-box-one");
 const askBoxTwo = document.getElementById("ask-box-two");
 const prayBox = document.getElementById("pray-box");
 
+// The array below wil be used as a temporary database for storing the miscellaneous prompts for each day.
+// Decision: Should each unique day have its own array or should one large array be appended with new entries.
+//  Until NODE.JS backend is working -> Unique arrays for each day
+
 let dailyPrompts = [
     [],
     [],
     [],
 ]
+
+// Basic func to update DailyPage until NODE.JS database is created
 
 function updateTodayPage() {
     dateHeader.textContent = today.toLocaleDateString('en-US', {month: 'long', day: 'numeric'});
@@ -37,3 +43,6 @@ function updateTodayPage() {
 
     console.log("Function updateTodayPage completed");
 }
+
+//  Create function below to convert date into string and compare with the name of array. 
+//  This will allow the call to reference the correct array above.
