@@ -32,7 +32,7 @@ let dailyPrompts = [
     {date: "7/26/2026", dateHeaderString: "July 26", verse: "Scripture Verses", questionA: "Question 1", questionB: "Question 2", prayer: "Prayer"},
 ]
 
-function getTodayPrompt(){
+function getTodayPrompt() {
     const todayDateString = today.toLocaleDateString('en-US');
     console.log(todayDateString);
 
@@ -45,11 +45,15 @@ function getTodayPrompt(){
 // Basic func to update DailyPage until NODE.JS database is created
 
 function updateTodayPage() {
-    dateHeader.textContent = today.toLocaleDateString('en-US', {month: 'long', day: 'numeric'});
-    scriptureVerses.textContent = "This will be replaced by an array or Database entry in futureeee";
-    askBoxOne.textContent = "How do you do?";
-    askBoxTwo.textContent = "When will this project make progress?";
-    prayBox.textContent = "Thank you Jesus, Amen!";
+    
+    let todayPrompt = getTodayPrompt();
+    console.log(todayPrompt);
+
+    dateHeader.textContent = todayPrompt?.dateHeaderString;
+    scriptureVerses.textContent = todayPrompt?.verse;
+    askBoxOne.textContent = todayPrompt?.questionA;
+    askBoxTwo.textContent = todayPrompt?.questionA;
+    prayBox.textContent = todayPrompt?.prayer;
 
     console.log("Function updateTodayPage completed");
 }
