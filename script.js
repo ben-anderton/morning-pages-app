@@ -54,7 +54,7 @@ function updateTodayPage() {
     scriptureVerses.textContent = todayPrompt?.verse;
     scriptureReference.textContent = todayPrompt?.reference;
     askBoxOne.textContent = todayPrompt?.questionA;
-    askBoxTwo.textContent = todayPrompt?.questionA;
+    askBoxTwo.textContent = todayPrompt?.questionB;
     prayBox.textContent = todayPrompt?.prayer;
 
     console.log("Function updateTodayPage completed");
