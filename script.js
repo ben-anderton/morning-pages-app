@@ -34,8 +34,14 @@ let dailyPrompts = [
         questionA: 'What does it mean to have a pure heart?',
         questionB: 'Why does Peter use "perishable seed" versus "imperishable seed" as a symbol for reasoning to love earnestly?',
         prayer: "Lord, lead me to love earnestly with eternal souls, that you have loved, in mind. May I submit to the truth with obedience. In Jesus' Name, Amen."},
-    {date: "7/26/2026", dateHeaderString: "July 26", verse: "Scripture Verses", reference: "Ps104", questionA: "Question 1", questionB: "Question 2", prayer: "Prayer"},
-    {date: "7/27/2026", dateHeaderString: "July 27", verse: "Scripture Verses", reference: "Ps104", questionA: "Question 1", questionB: "Question 2", prayer: "Prayer"},
+        
+    {date: "7/26/2026", dateHeaderString: "July 26", 
+        verse: "Be subject for the Lord's sake to every human institution, whether it be to the emperor as supreme, or to governors as sent by him to punish those who do evil and to praise those who do good. For this is the will of God, that by doing good you should put to silence the ignorance of foolish people. Live as people who are free, not using your freedom as a cover-up for evil, but living as servants of God. Honor everyone. Love the brotherhood. Fear God. Honor the emperor.",
+        reference: "1 Peter 2:13-17 ESV",
+        questionA: 'According to Peter, what manner of life should we live as Christians?',
+        questionB: "Are you surrendering all of areas of your life to God? What areas of your life are/aren't surrendered fully?",
+        prayer: "Lord, would you reveal my own heart to me. Would you give clarity and guidance, O Lord. Am I simply seeking my own ends? Am I allowing my pride to get in the way of Godly relationships? Bridle my tongue, and shape my heart. Grow me in your steadfast love. Give me wisdom and lead me in Your will! In Jesus' Name, Amen."},
+
 ]
 
 function getTodayPrompt() {
