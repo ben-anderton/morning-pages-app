@@ -28,9 +28,14 @@ const prayBox = document.getElementById("pray-box");
 //  Until NODE.JS backend is working -> Unique arrays for each day
 
 let dailyPrompts = [
-    {date: "7/24/2026", dateHeaderString: "July 24", verse: "Scripture Verses", reference: "Ps104", questionA: "Question 1", questionB: "Question 2", prayer: "Prayer"},
-    {date: "7/25/2026", dateHeaderString: "July 25", verse: "Scripture Verses", reference: "Ps104", questionA: "Question 1", questionB: "Question 2", prayer: "Prayer"},
+    {date: "7/25/2026", dateHeaderString: "July 25", 
+        verse: "Having purified your souls by obedience to the truth for a sincere brotherly love. love one another earnestly from a pure heart, since you have been born again not of a perishable seed but of imperishable, through the living and abiding word of God;",
+        reference: "1 Peter 1:22-23 ESV",
+        questionA: 'What does it mean to have a pure heart?',
+        questionB: 'Why does Peter use "perishable seed" versus "imperishable seed" as a symbol for reasoning to love earnestly?',
+        prayer: "Lord, lead me to love earnestly with eternal souls, that you have loved, in mind. May I submit to the truth with obedience. In Jesus' Name, Amen."},
     {date: "7/26/2026", dateHeaderString: "July 26", verse: "Scripture Verses", reference: "Ps104", questionA: "Question 1", questionB: "Question 2", prayer: "Prayer"},
+    {date: "7/27/2026", dateHeaderString: "July 27", verse: "Scripture Verses", reference: "Ps104", questionA: "Question 1", questionB: "Question 2", prayer: "Prayer"},
 ]
 
 function getTodayPrompt() {
@@ -60,3 +65,4 @@ function updateTodayPage() {
     console.log("Function updateTodayPage completed");
 }
 
+updateTodayPage();
