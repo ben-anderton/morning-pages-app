@@ -6,6 +6,11 @@
     <title>Morning Pages - Daily Bible Study</title>
     
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
     <script src="script.js" defer></script>
 
 </head>
@@ -22,8 +27,8 @@
         <div class="section-title">Read</div>
 
         <div class="content">
-            <div id="scripture-verses" class="scripture-verses"></div>
-            <div id="scripture-reference" class="scripture-reference"></div>
+            <div id="scripture-verses" class="scripture-verses text"></div>
+            <div id="scripture-reference" class="scripture-reference text"></div>
         </div>
 
     </div>
@@ -35,23 +40,25 @@
         <div class="content">
             
             <div class="question-box">
-                <div id="ask-box-one" class="question-title"></div>
+                <div id="ask-box-one" class="question-title text"></div>
                 <textarea
                  id="question-answer-box-one",
                  name="questionAnswerBoxOne",
                  rows="8",
                  cols="36",
-                 placeholder="Answer here..."></textarea>
+                 placeholder="Answer here...",
+                 class="text"></textarea>
             </div>
             
             <div class="question-box">
-                <div id="ask-box-two" class="question-title"></div>
+                <div id="ask-box-two" class="question-title text"></div>
                 <textarea
                  id="question-answer-box-two",
                  name="questionAnswerBoxTwo",
                  rows="8",
                  cols="36",
-                 placeholder="Answer here..."></textarea>
+                 placeholder="Answer here...",
+                 class="text"></textarea>
             </div>
 
         </div>
@@ -59,9 +66,9 @@
 
     <!-- This section is for the prayer for Today's Study -->    
     <div class="pray">
-        <div class="section-title">Pray</div>
+        <div class="section-title etxt">Pray</div>
 
-        <div id="pray-box" class="content"></div>
+        <div id="pray-box" class="content text"></div>
     </div>
      
 

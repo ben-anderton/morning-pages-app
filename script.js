@@ -29,7 +29,7 @@ const prayBox = document.getElementById("pray-box");
 
 let dailyPrompts = [
     {date: "7/25/2026", dateHeaderString: "July 25", 
-        verse: "Having purified your souls by obedience to the truth for a sincere brotherly love. love one another earnestly from a pure heart, since you have been born again not of a perishable seed but of imperishable, through the living and abiding word of God;",
+        verse: 'Having purified your souls by obedience to the truth for a sincere brotherly love. love one another earnestly from a pure heart, since you have been born again not of a perishable seed but of imperishable, through the living and abiding word of God;',
         reference: "1 Peter 1:22-23 ESV",
         questionA: 'What does it mean to have a pure heart?',
         questionB: 'Why does Peter use "perishable seed" versus "imperishable seed" as a symbol for reasoning to love earnestly?',
