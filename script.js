@@ -17,10 +17,13 @@ const today = new Date();
 console.log(today.toLocaleDateString('en-US')); 
 
 const dateHeader = document.getElementById("date-header");
+const readHeader = document.getElementById("read-header");
 const scriptureVerses = document.getElementById("scripture-verses");
 const scriptureReference = document.getElementById("scripture-reference");
+const askHeader = document.getElementById("ask-header");
 const askBoxOne = document.getElementById("ask-box-one");
 const askBoxTwo = document.getElementById("ask-box-two");
+const prayHeader = document.getElementById("pray-header");
 const prayBox = document.getElementById("pray-box");
 
 // The arrays below wil be used as a temporary database for storing the miscellaneous prompts for each day.
@@ -62,10 +65,13 @@ function updateTodayPage() {
     console.log(todayPrompt);
 
     dateHeader.textContent = todayPrompt?.dateHeaderString;
+    readHeader.textContent = "Read"
     scriptureVerses.textContent = todayPrompt?.verse;
     scriptureReference.textContent = todayPrompt?.reference;
+    askHeader.textContent = "Ask"
     askBoxOne.textContent = todayPrompt?.questionA;
     askBoxTwo.textContent = todayPrompt?.questionB;
+    prayHeader.textContent = "Pray"
     prayBox.textContent = todayPrompt?.prayer;
 
     console.log("Function updateTodayPage completed");
