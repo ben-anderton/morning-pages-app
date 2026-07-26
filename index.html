@@ -16,7 +16,12 @@
 </head>
 <body>
     <div class="header">
-        <button onclick="window.print()" id="print-button">Print/Save to PDF</button>
+        <!-- <div class="logo-container">
+            <a href="index.html">
+                <img src="images/Morning-Pages-Logo-Full.png" alt="Morning Pages Logo" height="60">
+            </a>
+            <a href="index.html" class="mp-header-text">Morning Pages</a>
+        </div> -->
     </div>
 
     <div id= "date-header" class="date-header"></div>
@@ -47,7 +52,7 @@
                  rows="8",
                  cols="36",
                  placeholder="Answer here...",
-                 class="text"></textarea>
+                 class="text flexible-textarea"></textarea>
             </div>
             
             <div class="question-box">
@@ -58,7 +63,7 @@
                  rows="8",
                  cols="36",
                  placeholder="Answer here...",
-                 class="text"></textarea>
+                 class="text flexible-textarea"></textarea>
             </div>
 
         </div>
@@ -72,7 +77,9 @@
     </div>
      
 
-    <div class="footer"></div>
+    <div class="footer">
+        <button onclick="window.print()" id="print-button">Print/Save to PDF</button>
+    </div>
 
 </body>
 </html>

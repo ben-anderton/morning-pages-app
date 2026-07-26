@@ -1,19 +1,19 @@
 
 
-.playfair-display-<uniquifier> {
+/* .playfair-display-<uniquifier> {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-}
+} */
 
 
-.manrope-<uniquifier> {
+/* .manrope-<uniquifier> {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-}
+} */
 
 /* This is the style sheet for the Main Page */
 
@@ -33,10 +33,16 @@ body {
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content:space-between;
     padding-right: 10px;
     padding-left: 10px;
     padding: 5px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .section-title {
@@ -89,6 +95,7 @@ body {
 button {
     min-width: 44px;
     min-height: 44px;
+    max-height: 55px;
     padding: 8px;
     font-family: "Manrope", "Playfair Display", serif;
     font-weight: 500;
@@ -98,10 +105,17 @@ button {
     border-radius: 8px;
 }
 
-textarea {
-    background-color: #d4e9e2;
-    border: #1e3932;
-    margin: 5px;
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+}
+
+.mp-header-text {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
 }
 
 .scripture-reference {
@@ -115,4 +129,20 @@ textarea {
 .text {
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.flexible-textarea {
+    field-sizing: content;
+    resize: none;
+    min-height: 3.5rem;
+    max-height: 200px;
+    width: 100%;
+    background-color: #d4e9e2;
+    border: #1e3932;
+    border-radius: 6px;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
 }
