@@ -137,6 +137,8 @@ button {
     min-height: 3.5rem;
     max-height: 200px;
     width: 100%;
+    font-family: "Manrope", "Playfair Display", serif;
+    font-size: 14px;
     background-color: #d4e9e2;
     border: #1e3932;
     border-radius: 6px;

@@ -44,6 +44,12 @@ let dailyPrompts = [
         questionA: 'According to Peter, what manner of life should we live as Christians?',
         questionB: "Are you surrendering all of areas of your life to God? What areas of your life are/aren't surrendered fully?",
         prayer: "Lord, would you reveal my own heart to me. Would you give clarity and guidance, O Lord. Am I simply seeking my own ends? Am I allowing my pride to get in the way of Godly relationships? Bridle my tongue, and shape my heart. Grow me in your steadfast love. Give me wisdom and lead me in Your will! In Jesus' Name, Amen."},
+    {date: "7/27/2026", dateHeaderString: "July 27", 
+        verse: "I have set the Lord always before me: because he is at my right hand, I shall not be shaken. Therefore my heart is glad, and my whole being rejoices; me flesh also dwells secure.",
+        reference: "1 Peter 2:13-17 ESV",
+        questionA: 'Why does the knowledge of the Lord being always before us make us unshaken?',
+        questionB: "What does it gladness, rejoicing, and security look like?",
+        prayer: "Lord, search me and know me. open my eyes to see your goodness. Let me my heart be glad for your are ever before me. Dwelling in your presence and resting in your promises give me security. Praise you in the highest for your mercy and grace. Thank you for for all you have done and continue to do for me. In Jesus' Name, Amen."},
 
 ]
 
