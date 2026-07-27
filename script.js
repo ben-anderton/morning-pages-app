@@ -102,7 +102,7 @@ const pdfHeightMm = (elementHeightPx * 25.4) / 96;
 const options = {
   margin: 0, // Set to 0 to prevent accidental extra page spillover
   filename: 'mp-daily-page'+today.toLocaleDateString('en-US')+'.pdf',
-  image: { type: 'jpeg', quality: 0.98 },
+  image: { type: 'pdf', quality: 0.98 },
   html2canvas: { 
     scale: 2, // High resolution scaling
     useCORS: true 
@@ -123,6 +123,6 @@ function exportPage2Pdf (){
 
 exportButton.addEventListener('click', function(){
     let pageExport = exportPage2Pdf();
-    alert('PDF Export completed');    
+    console.log('PDF Export completed');    
 });
 
