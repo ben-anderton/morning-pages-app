@@ -108,8 +108,8 @@ const options = {
     useCORS: true 
   },
   jsPDF: { 
-    unit: 'mm', 
-    format: [pdfWidthMm, pdfHeightMm], // Custom page size overriding A4/Letter
+    unit: 'in', 
+    format: 'letter', // Custom page size overriding A4/Letter
     orientation: 'portrait' 
   }
 };
