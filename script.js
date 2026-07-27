@@ -84,3 +84,45 @@ function updateTodayPage() {
 }
 
 updateTodayPage();
+
+
+// Configuration for html2pdf.js to allow export of pdf or print page
+
+// 1. Select the specific element you want to print
+const element = document.documentElement;
+// 2. Calculate the dynamic height in millimeters (assuming standard 96 DPI)
+const elementHeightPx = element.scrollHeight; 
+const elementWidthPx = element.scrollWidth;
+
+// Convert pixels to millimeters: (pixels * 25.4) / 96
+const pdfWidthMm = (elementWidthPx * 25.4) / 96;
+const pdfHeightMm = (elementHeightPx * 25.4) / 96;
+
+// 3. Configure html2pdf with the exact dynamic dimensions
+const options = {
+  margin: 0, // Set to 0 to prevent accidental extra page spillover
+  filename: 'mp-daily-page'+today.toLocaleDateString('en-US')+'.pdf',
+  image: { type: 'jpeg', quality: 0.98 },
+  html2canvas: { 
+    scale: 2, // High resolution scaling
+    useCORS: true 
+  },
+  jsPDF: { 
+    unit: 'mm', 
+    format: [pdfWidthMm, pdfHeightMm], // Custom page size overriding A4/Letter
+    orientation: 'portrait' 
+  }
+};
+
+// 4. Link to button and Generate PDF
+const exportButton = document.getElementById('print-button');
+
+function exportPage2Pdf (){
+    html2pdf().set(options).from(element).save();
+}
+
+exportButton.addEventListener('click', function(){
+    let pageExport = exportPage2Pdf();
+    alert('PDF Export completed');    
+});
+
