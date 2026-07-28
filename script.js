@@ -50,6 +50,12 @@ let dailyPrompts = [
         questionA: 'Why does the knowledge of the Lord being always before us make us unshaken?',
         questionB: "What does it gladness, rejoicing, and security look like?",
         prayer: "Lord, search me and know me. open my eyes to see your goodness. Let me my heart be glad for your are ever before me. Dwelling in your presence and resting in your promises give me security. Praise you in the highest for your mercy and grace. Thank you for for all you have done and continue to do for me. In Jesus' Name, Amen."},
+    {date: "7/28/2026", dateHeaderString: "July 28", 
+        verse: "He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness. By his wounds you have been healed. For you were straying like sheep, but have now returned to the Shepherd and Overseer of your souls.",
+        reference: "1 Peter 2:24-25 ESV",
+        questionA: "What is the significance of Christ's body being on a tree?",
+        questionB: "What picture is in your head when you imagine Jesus as your Shepherd?",
+        prayer: "Lord, lead me to honor the sacrifice you made. YOu took my curse upon yourself. You came a curse that I could be called a son of God. May that truth rest heavy in my heart. May I never forget the wounds that healed me. Thank you for your boundless grace. In Jesus' Name, Amen."},
 
 ]
 
