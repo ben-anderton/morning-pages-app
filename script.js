@@ -55,7 +55,13 @@ let dailyPrompts = [
         reference: "1 Peter 2:24-25 ESV",
         questionA: "What is the significance of Christ's body being on a tree?",
         questionB: "What picture is in your head when you imagine Jesus as your Shepherd?",
-        prayer: "Lord, lead me to honor the sacrifice you made. YOu took my curse upon yourself. You came a curse that I could be called a son of God. May that truth rest heavy in my heart. May I never forget the wounds that healed me. Thank you for your boundless grace. In Jesus' Name, Amen."},
+        prayer: "Lord, lead me to honor the sacrifice you made. You took my curse upon yourself. You came a curse that I could be called a son of God. May that truth rest heavy in my heart. May I never forget the wounds that healed me. Thank you for your boundless grace. In Jesus' Name, Amen."},
+    {date: "7/29/2026", dateHeaderString: "July 28", 
+        verse: "Finally, all of you, have unity of mind, sympathy, brotherly love, a tender heart, and a humble mind. Do not repay evil for evil or reviling for reviling, but on the contrary, bless, for to this you were called, that you may obtain a blessing.",
+        reference: "1 Peter 3:8-9 ESV",
+        questionA: "What is your heart posture towards other, especially those who have wronged you? Unity & brotherly love or cursing and reviling?",
+        questionB: "What blessing may we obtain by repaying curse with blessing?",
+        prayer: "Lord, thank you for the gift of the cross. Thank you that you love me when I was yet your enemy. Grow in me the fruit of the spirit that I may love as you love, serve as you serve, but above all see others ass you see them. May I have a sincere love for my brothers and sisters whom you love. To you be all the praise and glory, forever. In Jesus' Name, Amen."},
 
 ]
 
