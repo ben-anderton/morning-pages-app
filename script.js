@@ -77,7 +77,7 @@ let dailyPrompts = [
         questionB: "What blessing may we obtain by repaying curse with blessing?",
         prayer: "Lord, thank you for the gift of the cross. Thank you that you love me when I was yet your enemy. Grow in me the fruit of the spirit that I may love as you love, serve as you serve, but above all see others ass you see them. May I have a sincere love for my brothers and sisters whom you love. To you be all the praise and glory, forever. In Jesus' Name, Amen."
     },
-    {date: "7/31/2026", dateHeaderString: "July 30", 
+    {date: "7/31/2026", dateHeaderString: "July 31", 
         verse: "Now who is there to harm you if you are zealous for what is good? But even if you should suffer for righteousness' sake, you will be blessed. Have no fear of them, nor be troubled, but in your hearts honor Christ the Lord as holy, always being prepared to make a defense to anyone who asks you for a reason for the hope that is in you; yet do it with gentleness and respect, having a good conscience, so that, when you are slandered, those who revile your good behavior in Christ may be put to shame. For it is better to suffer for doing good, if that should be God's will, than for doing evil.",
         reference: "1 Peter 3:13-17 ESV",
         questionA: "As Christians, how can we have a defense prepared but still be gentle?",
