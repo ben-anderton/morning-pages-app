@@ -85,11 +85,11 @@ let dailyPrompts = [
         prayer: "Lord, teach me and mold me to suffer for your sake. To tame my tongue, and to prepare in season and out of season for the defense of the Gospel. Lead to love others and love you with my whole heart. Thank you for the cross.  In Jesus' Name, Amen."
     },
     {date: "8/1/2026", dateHeaderString: "August 1", 
-        verse: "",
-        reference: "1 Peter 3:8-9 ESV",
-        questionA: "",
-        questionB: "",
-        prayer: "Lord,  In Jesus' Name, Amen."
+        verse: "Baptism, which corresponds to this, now saves you, not as a removal of dirt from the body but as an appeal to God for a good conscience, through the resurrection of Jesus Christ, who has gone into heaven and is at the right hand of God, with angels, authorities, and powers having been subjected to him.",
+        reference: "1 Peter 3:21-22 ESV",
+        questionA: "What is the meaning of baptism?",
+        questionB: "What is your natural and unnatural response to Jesus's ascension?",
+        prayer: "Lord, lead me to have a heart for you. May I rest in the redemptive work in the cross. you as the firstborn of God have called me your won and welcomed me into your kingdom. Thank you for the undeserved grace and mercy.  In Jesus' Name, Amen."
     },
     
 
