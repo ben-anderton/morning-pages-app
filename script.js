@@ -87,8 +87,8 @@ let dailyPrompts = [
     {date: "8/1/2026", dateHeaderString: "August 1", 
         verse: "Baptism, which corresponds to this, now saves you, not as a removal of dirt from the body but as an appeal to God for a good conscience, through the resurrection of Jesus Christ, who has gone into heaven and is at the right hand of God, with angels, authorities, and powers having been subjected to him.",
         reference: "1 Peter 3:21-22 ESV",
-        questionA: "What is the meaning of baptism?",
-        questionB: "What is your natural and unnatural response to Jesus's ascension?",
+        questionA: "What is the meaning of baptism? How does this affect your life?",
+        questionB: "What is your natural and unnatural response to Jesus's ascension to the right hand of God? How does this change your view of baptism?",
         prayer: "Lord, lead me to have a heart for you. May I rest in the redemptive work in the cross. you as the firstborn of God have called me your won and welcomed me into your kingdom. Thank you for the undeserved grace and mercy.  In Jesus' Name, Amen."
     },
     
