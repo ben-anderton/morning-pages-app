@@ -91,7 +91,7 @@ let dailyPrompts = [
         questionB: "What is your natural and unnatural response to Jesus's ascension to the right hand of God? How does this change your view of baptism?",
         prayer: "Lord, lead me to have a heart for you. May I rest in the redemptive work in the cross. you as the firstborn of God have called me your won and welcomed me into your kingdom. Thank you for the undeserved grace and mercy.  In Jesus' Name, Amen."
     },
-    {date: "7/31/2026", dateHeaderString: "July 31", 
+    {date: "8/3/2026", dateHeaderString: "August 3", 
         verse: "Since therefore Christ suffered in the flesh, arm yourselves with the same way of thinking, for whoever has suffered in the flesh has ceased from sin, so as to live for the rest of the time in the flesh no longer for human passions but for the will of God.",
         reference: "1 Peter 4:1-2 ESV",
         questionA: "What does suffering for righteousness do as a Christian? How do you feel about being told you are to suffer for Christ?",
