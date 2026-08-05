@@ -98,7 +98,7 @@ let dailyPrompts = [
         questionB: "Why did Christ suffer? How should this change our view of our own suffering?",
         prayer: "Lord, lead me to see the world through your holy lens. Open my eyes to see the suffering of the saints and a gift that produces the peaceful fruit of righteousness. May I seek you first and rest fully in your promises. Thank you for the Cross and the perfect example of suffering for good. I give you all the praise and glory for your perfect providence. In Jesus' Name, Amen."
     },
-    {date: "8/4/2026", dateHeaderString: "August 4", 
+    {date: "8/5/2026", dateHeaderString: "August 5", 
         verse: "For the time that is past suffices for doing what the Gentiles want to do, living in sensuality, passions, drunkenness, orgies, drinking parties, and lawless idolatry. With respect to this they are surprised when you do not join them in the same flood of debauchery, and they malign you; but they will give account to him who is ready to judge the living and the dead.",
         reference: "1 Peter 4:3-5 ESV",
         questionA: "What does it mean that the time has passed for doing what Gentiles do?",
