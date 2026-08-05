@@ -98,13 +98,42 @@ let dailyPrompts = [
         questionB: "Why did Christ suffer? How should this change our view of our own suffering?",
         prayer: "Lord, lead me to see the world through your holy lens. Open my eyes to see the suffering of the saints and a gift that produces the peaceful fruit of righteousness. May I seek you first and rest fully in your promises. Thank you for the Cross and the perfect example of suffering for good. I give you all the praise and glory for your perfect providence. In Jesus' Name, Amen."
     },
-    {date: "8/5/2026", dateHeaderString: "August 5", 
+    {date: "8/4/2026", dateHeaderString: "August 4", 
         verse: "For the time that is past suffices for doing what the Gentiles want to do, living in sensuality, passions, drunkenness, orgies, drinking parties, and lawless idolatry. With respect to this they are surprised when you do not join them in the same flood of debauchery, and they malign you; but they will give account to him who is ready to judge the living and the dead.",
         reference: "1 Peter 4:3-5 ESV",
         questionA: "What does it mean that the time has passed for doing what Gentiles do?",
         questionB: "How does our view of sensuality and living in the flesh change how we ought to live? What is one practical way we can act on that today?",
         prayer: "Lord, lead me to see the world through your holy lens. Guard my heart against evil. Lead me in righteousness and help me to resist temptation. For the passions of the flesh are for the past. May my mind be set on the things above. May I seek you first and rest fully in your promises. Thank you for the Cross and the Holy Spirit power to overcome evil and temptation. I give you all the praise and glory for your perfect providence. In Jesus' Name, Amen."
     },
+    {date: "8/5/2026", dateHeaderString: "August 5", 
+        verse: "For this is why the gospel was preached even to those who are dead, that though judged in the flesh the way people are, they might live in the spirit the way God does.",
+        reference: "1 Peter 4:6 ESV",
+        questionA: "With yesterday's passage in mind, why was the gospel preached to those who are dead?",
+        questionB: "How does this truth impact our understanding of God's overwhelming grace? How should that understanding change our prayers?",
+        prayer: "Lord, you are overwhelmingly gracious. You are kind and merciful, abound in steadfast love. Thank you for the gift of grace you have given me and all believers in the world. Thank you that you have loved me even as your enemy. Search me and know me. Lead me in your Holy Spirit to worship you and give you the glory for the grace of the gospel. In Jesus' Name, Amen."
+    },
+    {date: "8/6/2026", dateHeaderString: "August 6", 
+        verse: "The end of all things is at hand; therefore be self-controlled and sober-minded for the sake of your prayers. Above all, keep loving one another earnestly, since love covers a multitude of sins. Show hospitality to one another without grumbling. As each has received a gift, use it to serve one another, as good stewards of God's varied grace: whoever speaks, as one who speaks oracles of God; whoever serves, as one who serves by the strength that God supplies—in order that in everything God may be glorified through Jesus Christ. To him belong glory and dominion forever and ever. Amen.",
+        reference: "1 Peter 4:7-11 ESV",
+        questionA: "How are our prayers affected by our actions? How should this change the way we live?",
+        questionB: "Peter exhorts us to serve using the gifts we have been given. How can we practically live out his command to love and serve?",
+        prayer: "Lord, lead me to seek your ways. Thank you for your Word and the divine grace that has saved me. Thank you that I have been given gifts to be able to serve you. Thank you that, by your grace, the love of the Holy Spirit is within me, enabling me to love others as you do. I give you all praise ang lory for the good news of the gospel and the revelation of the gift of eternal life. May I live in light of eternity and love others rightly. In Jesus' Name, Amen."
+    },
+    {date: "8/7/2026", dateHeaderString: "August 7", 
+        verse: "",
+        reference: "1 Peter 3:8-9 ESV",
+        questionA: "",
+        questionB: "",
+        prayer: "Lord,  In Jesus' Name, Amen."
+    },
+    {date: "8/8/2026", dateHeaderString: "August 8", 
+        verse: "",
+        reference: "1 Peter 3:8-9 ESV",
+        questionA: "",
+        questionB: "",
+        prayer: "Lord,  In Jesus' Name, Amen."
+    },
+
 
 ]
 
