@@ -120,11 +120,11 @@ let dailyPrompts = [
         prayer: "Lord, lead me to seek your ways. Thank you for your Word and the divine grace that has saved me. Thank you that I have been given gifts to be able to serve you. Thank you that, by your grace, the love of the Holy Spirit is within me, enabling me to love others as you do. I give you all praise ang lory for the good news of the gospel and the revelation of the gift of eternal life. May I live in light of eternity and love others rightly. In Jesus' Name, Amen."
     },
     {date: "8/7/2026", dateHeaderString: "August 7", 
-        verse: "",
-        reference: "1 Peter 3:8-9 ESV",
-        questionA: "",
-        questionB: "",
-        prayer: "Lord,  In Jesus' Name, Amen."
+        verse: "Beloved, do not be surprised at the fiery trial when it comes upon you to test you, as though something strange were happening to you. But rejoice insofar as you share Christ's sufferings, that you may also rejoice and be glad when his glory is revealed. If you are insulted for the name of Christ, you are blessed, because the Spirit of glory and of God rests upon you.",
+        reference: "1 Peter 4:12-14 ESV",
+        questionA: "What is the purpose of suffering? Why should this make us rejoice?",
+        questionB: "Peter encourages us that when we are insulted for the name of Christ, the spirit of God rests upon us. How should this change our view of suffering? What does it mean about God's view of his children suffering?",
+        prayer: "Lord, you have suffered so much for my sake. You suffered to the point of death on a cross that I could know you, and be known by you. Thank you for the gift of grace and mercy. Thank you for the fiery trial I am in the middle of. Though I may not see your glorious purpose in it, I thank you and praise you for your Spirit with me, suffering with me.Would you help me to see suffering through your holy eyes. To you be the glory forever. In Jesus' Name, Amen."
     },
     {date: "8/8/2026", dateHeaderString: "August 8", 
         verse: "",
