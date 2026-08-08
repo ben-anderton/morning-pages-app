@@ -127,11 +127,11 @@ let dailyPrompts = [
         prayer: "Lord, you have suffered so much for my sake. You suffered to the point of death on a cross that I could know you, and be known by you. Thank you for the gift of grace and mercy. Thank you for the fiery trial I am in the middle of. Though I may not see your glorious purpose in it, I thank you and praise you for your Spirit with me, suffering with me.Would you help me to see suffering through your holy eyes. To you be the glory forever. In Jesus' Name, Amen."
     },
     {date: "8/8/2026", dateHeaderString: "August 8", 
-        verse: "",
-        reference: "1 Peter 3:8-9 ESV",
-        questionA: "",
-        questionB: "",
-        prayer: "Lord,  In Jesus' Name, Amen."
+        verse: "But let none of you suffer as a murderer or a thief or an evildoer or as a meddler. Yet if anyone suffers as a Christian, let him not be ashamed, but let him glorify God in that name.",
+        reference: "1 Peter 4:15-16 ESV",
+        questionA: "Why are we told to not suffer as a murderer, a thief, an evildoer, or a meddler? What is the difference between suffering for wrong and suffering for good?",
+        questionB: "Peter elevates suffering 'as a Christian'. Consider the weight of suffering as a Christian vs suffering as just yourself. Why would peter elevate suffering as a Christian?",
+        prayer: "Lord, lead me to love you as I ought you. You suffered for my sake. May I take up my cross and follow you. Would I not rehearse empty words with my lips, but would my heart seek to do right and embrace suffering when it come for your sake. For you suffered greatly, that I may be called your son. You were beaten that I may be called your friend. You were reviled that I could be blessed by you. Thank you for your boundless grace. May that rest heavy in my life today.  In Jesus' Name, Amen."
     },
 
 
