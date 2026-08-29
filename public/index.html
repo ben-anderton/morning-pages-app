@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Pages - Daily Bible Study</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js"
+        integrity="sha512-D25Z8/1q2z65ZpJ3NzY6XiPZfwjhbv34OTQHDIZd+KPK+uWCovGt+fMkSzW8ArzCMFUgZt6Cdu7qoXNuy6a2GA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/12.18.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/12.18.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/12.18.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/12.18.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/12.18.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/12.18.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/12.18.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/12.18.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/12.18.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/12.18.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+</head>
+<body>
+    <div class="header">
+        <!-- <div class="logo-container">
+            <a href="index.html">
+                <img src="images/Morning-Pages-Logo-Full.png" alt="Morning Pages Logo" height="60">
+            </a>
+            <a href="index.html" class="mp-header-text">Morning Pages</a>
+        </div> -->
+    </div>
+
+
+    
+    <div id= "date-header" class="date-header"></div>
+
+    <!-- This section is for the Bible excerpt for Today's Study -->
+    <div id="read-box" class="read">
+       
+        <div class="section-title" id="read-header"></div>
+
+        <div class="content">
+            <div id="scripture-verses" class="scripture-verses text"></div>
+            <div id="scripture-reference" class="scripture-reference text"></div>
+        </div>
+
+    </div>
+
+    <!-- This section is for the journaling questions for Today's Study -->
+    <div id="ask-box" class="ask">
+        <div class="section-title" id="ask-header"></div>
+
+        <div class="content">
+            
+            <div class="question-box">
+                <div id="ask-box-one" class="question-title text"></div>
+                <textarea
+                 id="question-answer-box-one",
+                 name="questionAnswerBoxOne",
+                 rows="8",
+                 cols="36",
+                 placeholder="Answer here...",
+                 class="text flexible-textarea"></textarea>
+            </div>
+            
+            <div class="question-box">
+                <div id="ask-box-two" class="question-title text"></div>
+                <textarea
+                 id="question-answer-box-two",
+                 name="questionAnswerBoxTwo",
+                 rows="8",
+                 cols="36",
+                 placeholder="Answer here...",
+                 class="text flexible-textarea"></textarea>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- This section is for the prayer for Today's Study -->    
+    <div class="pray">
+        <div class="section-title" id="pray-header"></div>
+
+        <div id="pray-box" class="content text"></div>
+    </div>
+     
+
+    <div class="footer">
+        <button id="print-button">Print/Save to PDF</button>
+    </div>
+
+</body>
+</html>
