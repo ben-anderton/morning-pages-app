@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
+
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js"
         integrity="sha512-D25Z8/1q2z65ZpJ3NzY6XiPZfwjhbv34OTQHDIZd+KPK+uWCovGt+fMkSzW8ArzCMFUgZt6Cdu7qoXNuy6a2GA=="
@@ -48,8 +50,15 @@
         </div> -->
     </div>
 
+    <section id="whenSignedOut">
+        <button id = signInBtn>Sign In</button>
+    </section>
 
-    
+    <section id="whenSignedIn" hidden="true">
+        <div id="userDetails"></div>
+        <button id = signOutBtn>Sign Out</button>
+    </section>
+
     <div id= "date-header" class="date-header"></div>
 
     <!-- This section is for the Bible excerpt for Today's Study -->
