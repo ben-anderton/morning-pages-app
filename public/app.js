@@ -19,12 +19,15 @@ auth.onAuthStateChanged(user => {
         // signed in
         whenSignedIn.hidden = false;
         whenSignedOut.hidden = true;
-        userDetails.innerHTML = `<h3>Hello ${user.displayName}! </h3>`
+        userDetails.innerHTML = `<h3>Hello ${user.displayName}! </h3>`;
+        console.log('Sign in Successful');
     } else {
         //not signed In
         whenSignedIn.hidden = true;
         whenSignedOut.hidden = false;
         userDetails.innerHTML = '';
+        console.log('Sign in Successful');
     }
 });
 
+console.log(`${user.displayName}`);
