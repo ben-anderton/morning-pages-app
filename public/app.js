@@ -1,71 +1,66 @@
-// 1. Import the correct modern functions from the Firebase SDKs
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// 1. Import statements mapped directly to Firebase version 15.28.2 CDN paths
+
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js';
+
+// Add Firebase products that you want to use
 import { 
     getAuth, 
     onAuthStateChanged, 
     GoogleAuthProvider, 
-    signInWithRedirect, 
+    signInWithPopup, 
     signOut 
-} from "firebase/auth";
+    } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js';
+
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBrAuRsLZAFXfn16R00psX--ZxhA_UcVjE",
-    authDomain: "morning-pages-bible-study.firebaseapp.com",
+    authDomain: "://firebaseapp.com",
     projectId: "morning-pages-bible-study",
     storageBucket: "morning-pages-bible-study.firebasestorage.app",
     messagingSenderId: "578715363427",
     appId: "1:578715363427:web:9c254656a32acdfc66b056",
-    measurementId: "G-4TRWEPMJN7"
+    measurementId: "G-4TRWEPMJN7" // Kept in config just in case, but unused in code
 };
 
-// 2. Initialize Firebase and Auth services
+// 2. Initialize core Firebase App and Auth instances
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const auth = getAuth(app); // This is declared EXACTLY once now
 
-// 3. Grab your HTML DOM elements
+///// User Authentication /////
+
+const auth = firebase.auth();
+
 const whenSignedIn = document.getElementById('whenSignedIn');
 const whenSignedOut = document.getElementById('whenSignedOut');
+
 const signInBtn = document.getElementById('signInBtn');
 const signOutBtn = document.getElementById('signOutBtn');
+
 const userDetails = document.getElementById('userDetails');
 
-// 4. Create the modern Google Auth Provider instance
-const provider = new GoogleAuthProvider();
 
-// 5. Explicitly handle sign-in button click using modern modular syntax
-if (signInBtn) {
-    signInBtn.onclick = () => {
-        signInWithRedirect(auth, provider);
-    };
-}
+const provider = new firebase.auth.GoogleAuthProvider();
 
-// Explicitly handle sign-out button click using modern modular syntax
-if (signOutBtn) {
-    signOutBtn.onclick = () => {
-        signOut(auth)
-            .then(() => console.log("User manually signed out."))
-            .catch((error) => console.error("Sign out error:", error));
-    };
-}
+/// Sign in event handlers
 
-// 6. Global Auth State Observer (Modern syntax passes 'auth' as the first argument)
-onAuthStateChanged(auth, (user) => {
+signInBtn.onclick = () => auth.signInWithPopup(provider);
+
+signOutBtn.onclick = () => auth.signOut();
+
+auth.onAuthStateChanged(user => {
     if (user) {
-        // User is signed in
-        if (whenSignedIn) whenSignedIn.hidden = false;
-        if (whenSignedOut) whenSignedOut.hidden = true;
-        if (userDetails) {
-            userDetails.innerHTML = `<h3>Hello ${user.displayName || user.email || 'User'}! </h3>`;
-        }
-        console.log('Sign in Successful:', user.displayName);
+        // signed in
+        whenSignedIn.hidden = false;
+        whenSignedOut.hidden = true;
+        userDetails.innerHTML = `<h3>Hello ${user.displayName}!</h3> <p>User ID: ${user.uid}</p>`;
     } else {
-        // User is signed out
-        if (whenSignedIn) whenSignedIn.hidden = true;
-        if (whenSignedOut) whenSignedOut.hidden = false;
-        if (userDetails) userDetails.innerHTML = '';
-        console.log('No user signed in.');
+        // not signed in
+        whenSignedIn.hidden = true;
+        whenSignedOut.hidden = false;
+        userDetails.innerHTML = '';
     }
 });
+
+
+
