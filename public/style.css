@@ -51,7 +51,7 @@ body {
 }
 
 /* General Section Layout */
-.read, .ask, .pray .dev-notes .thank-you {
+.read, .ask, .pray, .dev-notes, .thank-you {
     margin: 10px;
     margin-left: 30px;
     margin-right: 30px;
