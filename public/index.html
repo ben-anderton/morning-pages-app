@@ -45,95 +45,100 @@
     <script src="app.js" defer type="module"></script>
 </head>
 <body>
-    <div class="header">
-        <!-- <div class="logo-container">
-            <a href="index.html">
-                <img src="images/Morning-Pages-Logo-Full.png" alt="Morning Pages Logo" height="60">
-            </a>
-            <a href="index.html" class="mp-header-text">Morning Pages</a>
-        </div> -->
-    </div>
+    <div id="site-container" class="site-container">
 
-    <section id="whenSignedOut">
-        <button id = signInBtn>Sign In</button>
-    </section>
-
-    <section id="whenSignedIn" hidden="true">
-        <div id="userDetails"></div>
-        <button id = signOutBtn>Sign Out</button>
-    </section>
-
-    <div id= "date-header" class="date-header"></div>
-
-    <!-- This section is for the Bible excerpt for Today's Study -->
-    <div id="read-box" class="read">
-       
-        <div class="section-title" id="read-header"></div>
-
-        <div class="content">
-            <div id="scripture-passage" class="scripture-passage text"></div>
-            <div id="scripture-reference" class="scripture-reference text"></div>
+        
+        <div class="header">
+            <!-- <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/Morning-Pages-Logo-Full.png" alt="Morning Pages Logo" height="60">
+                </a>
+                <a href="index.html" class="mp-header-text">Morning Pages</a>
+            </div> -->
         </div>
 
-    </div>
+        <section id="whenSignedOut">
+            <button id = signInBtn>Sign In</button>
+        </section>
 
-    <!-- This section is for the journaling questions for Today's Study -->
-    <div id="ask-box" class="ask">
-        <div class="section-title" id="ask-header"></div>
+        <section id="whenSignedIn" hidden="true">
+            <div id="userDetails"></div>
+            <button id = signOutBtn>Sign Out</button>
+        </section>
 
-        <div class="content">
-            
-            <div class="question-box">
-                <div id="ask-box-one" class="question-title text"></div>
-                <textarea
-                 id="question-answer-box-one",
-                 name="questionAnswerBoxOne",
-                 rows="8",
-                 cols="36",
-                 placeholder="Answer here...",
-                 class="text flexible-textarea"></textarea>
-            </div>
-            
-            <div class="question-box">
-                <div id="ask-box-two" class="question-title text"></div>
-                <textarea
-                 id="question-answer-box-two",
-                 name="questionAnswerBoxTwo",
-                 rows="8",
-                 cols="36",
-                 placeholder="Answer here...",
-                 class="text flexible-textarea"></textarea>
+        <div id= "date-header" class="date-header"></div>
+
+        <!-- This section is for the Bible excerpt for Today's Study -->
+        <div id="read-box" class="read">
+        
+            <div class="section-title" id="read-header"></div>
+
+            <div class="content">
+                <div id="scripture-passage" class="scripture-passage text"></div>
+                <div id="scripture-reference" class="scripture-reference text"></div>
             </div>
 
         </div>
-    </div>
 
-    <!-- This section is for the prayer for Today's Study -->    
-    <div class="pray">
-        <div class="section-title" id="pray-header"></div>
+        <!-- This section is for the journaling questions for Today's Study -->
+        <div id="ask-box" class="ask">
+            <div class="section-title" id="ask-header"></div>
 
-        <div id="pray-box" class="content text"></div>
-    </div>
-     
+            <div class="content">
+                
+                <div class="question-box">
+                    <div id="ask-box-one" class="question-title text"></div>
+                    <textarea
+                    id="question-answer-box-one",
+                    name="questionAnswerBoxOne",
+                    rows="8",
+                    cols="36",
+                    placeholder="Answer here...",
+                    class="text flexible-textarea"></textarea>
+                </div>
+                
+                <div class="question-box">
+                    <div id="ask-box-two" class="question-title text"></div>
+                    <textarea
+                    id="question-answer-box-two",
+                    name="questionAnswerBoxTwo",
+                    rows="8",
+                    cols="36",
+                    placeholder="Answer here...",
+                    class="text flexible-textarea"></textarea>
+                </div>
 
-    <div class="footer">
-        <!-- Unnecessary feature for the time being one the Auth save is complete. -->
-        <!-- <button id="print-button">Print/Save to PDF</button> -->
-        <button id="saveBtn" hidden="true">Save</button>
-        <div class="thank-you" id="thank-you"> 
-            Thank you for your early support of Morning Pages!
-            
-            This is our working prototype. In the coming days and weeks you can expect to see many different updates to improve our user experience.
+            </div>
+        </div>
 
-            Your feedback is crucial! If you are testing this and have any thoughts send them to Ben.
+        <!-- This section is for the prayer for Today's Study -->    
+        <div class="pray">
+            <div class="section-title" id="pray-header"></div>
+
+            <div id="pray-box" class="content text"></div>
+        </div>
+        
+
+        <div class="footer">
+            <!-- Unnecessary feature for the time being one the Auth save is complete. -->
+            <!-- <button id="print-button">Print/Save to PDF</button> -->
+            <button id="saveBtn" hidden="true">Save</button>
+            <div class="thank-you" id="thank-you"> 
+                Thank you for your early support of Morning Pages!
+                
+                This is our working prototype. In the coming days and weeks you can expect to see many different updates to improve our user experience.
+
+                Your feedback is crucial! If you are testing this and have any thoughts send them to Ben.
+            </div>
+        </div>
+
+        <div class="spacer" id="spacer"></div>
+
+        <div class="dev-notes" id="dev-notes">
+            P.S. The save feature is almost finished. For now, screenshot your response to save it. 9/1/26
         </div>
     </div>
 
-    <div class="spacer" id="spacer"></div>
-
-    <div class="dev-notes" id="dev-notes">
-        P.S. The save feature is almost finished. For now, screenshot your response to save it. 9/1/26
-    </div>
 
 </body>
 </html>

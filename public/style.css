@@ -17,20 +17,54 @@
 
 /* This is the style sheet for the Main Page */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #d4e9e2;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
     justify-content: center;
     justify-self: center;
-    max-width: 550px;
     font-size: 16px;
     font-weight: 400;
     font-family: 'Manrope','Playfair Display', 'Times New Roman', Times, serif;
     padding:5px;
 }
 
+.site-container site-container {
+    display: -webkit-box;      /* Old iOS / Safari fallback */
+    display: -webkit-flex;     /* Safari fallback */
+    display: flex;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 550px;
+    min-height: 100vh;
+    margin: 0;
+}
+
 .header {
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -40,9 +74,11 @@ body {
 }
 
 .footer {
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .section-title {
@@ -58,7 +94,7 @@ body {
     padding: 15px;
     min-height: 50px;
     min-width: 250px;
-    max-width: 650px;
+    max-width: 550px;
 
     
     border-radius: 10px;
@@ -106,14 +142,18 @@ button {
 }
 
 .logo-container{
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     justify-content: center;
     justify-self: center;
+    align-items: center;
 }
 
 .mp-header-text {
+    display: -webkit-flex;
     display: flex;
+    align-items: center;
     justify-content: center;
     justify-self: center;
 }
