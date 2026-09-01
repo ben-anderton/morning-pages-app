@@ -11,7 +11,7 @@ import {
     signOut 
     } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js';
 
-import { getFirestore } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js';
+import { collection, setDoc, getDoc, getFirestore, doc, onSnapshot, query, where } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -61,6 +61,108 @@ auth.onAuthStateChanged(user => {
         userDetails.innerHTML = '';
     }
 });
+
+
+///// Firestore /////
+
+// This is the stock logic from Fireship. Update this with Daily Page update logic. //
+
+    ////// TO DO //////
+// 1. Add prompt database to Firestore
+// 2. Write logic to display the current date's morning page by default. 
+    // Include a button that will refresh the date in an old browser window
+// 3. Add journal database to Firestore
+// 4. Write logic to auto-save current input after every keystroke or on timer to Journal Database
+// 5. Write Logic to read previous Days and Display them.
+
+const db = getFirestore(app);
+
+
+// Build out Get DailyPage COntent
+
+const today = new Date();
+console.log(today.toLocaleDateString('en-US')); 
+
+let promptsRef;
+
+// Basic func to get DailyPagePrompt from the Database
+
+async function getTodayPrompt() {
+    const date = new Date();
+
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-11
+    const dd = String(date.getDate()).padStart(2, '0');
+
+    const todayDateString = `${mm}-${dd}-${yyyy}`;
+    console.log(todayDateString); // "08-31-2026"
+
+
+        // //return all objects in dailyPrompts array for today
+        // let todayPrompt = dailyPrompts.find(dayPrompt => dayPrompt.date === todayDateString);
+        // return(todayPrompt);
+        // console.log(todayPrompt);
+
+        // //new FUNC: get Firebase prompt.
+
+
+    const docRef = doc(db, "prompts", `${mm}-${dd}-${yyyy}`);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+        // console.log("Document data:", docSnap.data());
+        
+        const todayPrompt = docSnap.data();   
+        
+        const dateHeader = document.getElementById("date-header");
+        const readHeader = document.getElementById("read-header");
+        const scripturePassage = document.getElementById("scripture-passage");
+        const scriptureReference = document.getElementById("scripture-reference");
+        const askHeader = document.getElementById("ask-header");
+        const askBoxOne = document.getElementById("ask-box-one");
+        const askBoxTwo = document.getElementById("ask-box-two");
+        const prayHeader = document.getElementById("pray-header");
+        const prayBox = document.getElementById("pray-box");
+
+        dateHeader.textContent = docSnap.data().dateHeaderString;
+        readHeader.textContent = "Read";
+        scripturePassage.textContent = todayPrompt.scripturePassage;
+        scriptureReference.textContent = todayPrompt.scriptureReference;
+        askHeader.textContent = "Ask";
+        askBoxOne.textContent = todayPrompt.questionA;
+        askBoxTwo.textContent = todayPrompt.questionB;
+        prayHeader.textContent = "Pray";
+        prayBox.textContent = todayPrompt.prayer;
+
+        console.log("Function updateTodayPage completed");
+
+
+        console.log("Function updateTodayPage completed");
+    } else {
+        // docSnap.data() will be undefined in this case
+        console.log("No such document!");
+    }
+
+
+    
+    // Database Reference
+}
+getTodayPrompt();
+
+// function getSingleDocument() {
+//     promptsRef = db.collection('prompts');
+
+//     const todayPromptDocRef = doc(db, "prompts", todayDateString); 
+//     const todayPromptData = getDoc(todayPromptDocRef);
+
+//     console.log("This is today's prompt data:" + todayPromptData)
+//     return todayPromptData;
+
+// }
+// getSingleDocument();
+
+// Basic func to update DailyPage until NODE.JS database is created
+
 
 
 

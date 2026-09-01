@@ -18,7 +18,7 @@ console.log(today.toLocaleDateString('en-US'));
 
 const dateHeader = document.getElementById("date-header");
 const readHeader = document.getElementById("read-header");
-const scriptureVerses = document.getElementById("scripture-verses");
+const scripturePassage = document.getElementById("scripture-passage");
 const scriptureReference = document.getElementById("scripture-reference");
 const askHeader = document.getElementById("ask-header");
 const askBoxOne = document.getElementById("ask-box-one");
@@ -156,7 +156,7 @@ function updateTodayPage() {
 
     dateHeader.textContent = todayPrompt?.dateHeaderString;
     readHeader.textContent = "Read"
-    scriptureVerses.textContent = todayPrompt?.verse;
+    scripturePassage.textContent = todayPrompt?.verse;
     scriptureReference.textContent = todayPrompt?.reference;
     askHeader.textContent = "Ask"
     askBoxOne.textContent = todayPrompt?.questionA;
