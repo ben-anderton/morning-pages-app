@@ -148,3 +148,7 @@ a {
     text-decoration: none;
     color: whitesmoke;
 }
+
+.spacer {
+    min-height: 15px;
+}
