@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // 1. Import statements mapped directly to Firebase version 15.28.2 CDN paths
 
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js';
@@ -15,12 +17,12 @@ import { collection, setDoc, getDoc, getFirestore, doc, onSnapshot, query, where
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
-    authDomain: "://firebaseapp.com",
-    projectId: "morning-pages-bible-study",
-    storageBucket: "morning-pages-bible-study.firebasestorage.app",
-    messagingSenderId: "578715363427",
-    appId: "1:578715363427:web:9c254656a32acdfc66b056",
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIREBASE_APP_ID,
     measurementId: "G-4TRWEPMJN7" // Kept in config just in case, but unused in code
 };
 
