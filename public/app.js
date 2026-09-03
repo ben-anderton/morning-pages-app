@@ -15,7 +15,7 @@ import { collection, setDoc, getDoc, getFirestore, doc, onSnapshot, query, where
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBrAuRsLZAFXfn16R00psX--ZxhA_UcVjE",
+    apiKey: process.env.API_KEY,
     authDomain: "://firebaseapp.com",
     projectId: "morning-pages-bible-study",
     storageBucket: "morning-pages-bible-study.firebasestorage.app",

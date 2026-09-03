@@ -1,1 +1,4 @@
 /node_modules/
+
+# Exclude local environmental keys
+./.env
