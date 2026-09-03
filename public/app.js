@@ -53,7 +53,7 @@ auth.onAuthStateChanged(user => {
         // signed in
         whenSignedIn.hidden = false;
         whenSignedOut.hidden = true;
-        userDetails.innerHTML = `<h3>Hello ${user.displayName}!</h3> <p>User ID: ${user.uid}</p>`;
+        // userDetails.innerHTML = `<h3>Hello ${user.displayName}!</h3> <p>User ID: ${user.uid}</p>`;
     } else {
         // not signed in
         whenSignedIn.hidden = true;
@@ -126,7 +126,7 @@ async function getTodayPrompt() {
 
         dateHeader.textContent = docSnap.data().dateHeaderString;
         readHeader.textContent = "Read";
-        scripturePassage.textContent = todayPrompt.scripturePassage;
+        scripturePassage.innerHTML = todayPrompt.scripturePassage;
         scriptureReference.textContent = todayPrompt.scriptureReference;
         askHeader.textContent = "Ask";
         askBoxOne.textContent = todayPrompt.questionA;
@@ -136,8 +136,6 @@ async function getTodayPrompt() {
 
         console.log("Function updateTodayPage completed");
 
-
-        console.log("Function updateTodayPage completed");
     } else {
         // docSnap.data() will be undefined in this case
         console.log("No such document!");
@@ -166,3 +164,57 @@ getTodayPrompt();
 
 
 
+let journalRef;
+let unsubscribe;
+
+auth.onAuthStateChanged(user => {
+
+    if (user) {
+
+        // Database Reference
+        journalRef = db.collection('journal');
+
+        saveBtn.onclick = () => {
+
+            const { serverTimestamp } = firebase.firestore.FieldValue;
+
+            journalRef.add({
+                uid: user.uid,
+                questionAResponse: askBoxTwo.innerHTML(),
+                questionBResponse: askBoxTwo.innerHTML(),
+                createdAt: serverTimestamp()
+            });
+        }
+
+
+        // Query
+        unsubscribe = journalRef
+            .where('uid', '==', user.uid)
+            .orderBy('createdAt') // Requires a query
+            .onSnapshot(querySnapshot => {
+                
+                // Map results to an array of li elements
+
+                const journalEntryA = querySnapshot.docs.map(doc => {
+
+                    return `${doc.data().questionAResponse}`
+
+                });
+                const journalEntryB = querySnapshot.docs.map(doc => {
+
+                    return `${doc.data().questionBResponse}`
+
+                });
+
+                askBoxOne.innerHTML = journalEntryA;
+                askBoxTwo.innerHTML = journalEntryB;
+
+            });
+
+
+
+    } else {
+        // Unsubscribe when the user signs out
+        unsubscribe && unsubscribe();
+    }
+});

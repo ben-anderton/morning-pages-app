@@ -36,6 +36,7 @@ body {
     font-weight: 400;
     font-family: 'Manrope','Playfair Display', 'Times New Roman', Times, serif;
     padding:5px;
+    margin: 0;
 }
 
 .site-container site-container {
@@ -60,7 +61,7 @@ body {
     width: 100%;
     max-width: 550px;
     min-height: 100vh;
-    margin: 0;
+    margin: 10px;
 }
 
 .header {
@@ -88,15 +89,11 @@ body {
 
 /* General Section Layout */
 .read, .ask, .pray, .dev-notes, .thank-you {
-    margin: 10px;
-    margin-left: 30px;
-    margin-right: 30px;
     padding: 15px;
     min-height: 50px;
     min-width: 250px;
     max-width: 550px;
 
-    
     border-radius: 10px;
 }
 
@@ -181,7 +178,7 @@ button {
     padding-left: 5px;
     padding-right: 5px;
     font-family: "Manrope", "Playfair Display", serif;
-    font-size: 14px;
+    font-size: 16px;
     background-color: #d4e9e2;
     border: #1e3932;
     border-radius: 6px;
