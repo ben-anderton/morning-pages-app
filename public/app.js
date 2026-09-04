@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 
 // 1. Import statements mapped directly to Firebase version 15.28.2 CDN paths
 
@@ -13,16 +13,16 @@ import {
     signOut 
     } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js';
 
-import { collection, setDoc, getDoc, getFirestore, doc, onSnapshot, query, where } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js';
+import { collection, setDoc, getDoc, getFirestore, doc, onSnapshot, query, where, orderBy, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: process.env.FIREBASE_API_KEY,
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.FIREBASE_APP_ID,
+    apiKey: "AIzaSyBrAuRsLZAFXfn16R00psX--ZxhA_UcVjE",
+    authDomain: "://firebaseapp.com",
+    projectId: "morning-pages-bible-study",
+    storageBucket: "morning-pages-bible-study.firebasestorage.app",
+    messagingSenderId: "578715363427",
+    appId: "1:578715363427:web:9c254656a32acdfc66b056",
     measurementId: "G-4TRWEPMJN7" // Kept in config just in case, but unused in code
 };
 
@@ -165,58 +165,139 @@ getTodayPrompt();
 
 
 
+//My Shoddy tutorial code.
 
-let journalRef;
+// let journalRef;
+// let unsubscribe;
+
+// auth.onAuthStateChanged(user => {
+
+//     if (user) {
+
+//         // Database Reference
+//         journalRef = db.collection('journal');
+
+//         const inputOne = document.getElementById("question-answer-box-one");
+//         const inputTwo = document.getElementById("question-answer-box-two");
+
+//         saveBtn.addEventListener("click", async () => {
+
+//             const answerOne = inputOne.value.trim();
+//             const answerTwo = inputTwo.value.trim();
+
+//             const { serverTimestamp } = firebase.firestore.FieldValue;
+
+//             const journalEntry = await addDoc(collection(db, "journal"),{
+//                 uid: user.uid,
+//                 questionAResponse: answerOne.innerHTML(),
+//                 questionBResponse: answerTwo.innerHTML(),
+//                 createdAt: serverTimestamp()
+//             });
+
+//             console.log("Data saved successfully! ID:", journalEntry.id);
+//         }
+
+        
+
+//         // Query
+//         unsubscribe = journalRef
+//             .where('uid', '==', user.uid)
+//             .orderBy('createdAt') // Requires a query
+//             .onSnapshot(querySnapshot => {
+                
+//                 // Map results to an array of li elements
+
+//                 const journalEntryA = querySnapshot.docs.map(doc => {
+
+//                     return `${doc.data().questionAResponse}`
+
+//                 });
+//                 const journalEntryB = querySnapshot.docs.map(doc => {
+
+//                     return `${doc.data().questionBResponse}`
+
+//                 });
+
+//                 askBoxOne.innerHTML = journalEntryA;
+//                 askBoxTwo.innerHTML = journalEntryB;
+
+//             }));
+
+
+
+//     } else {
+//         // Unsubscribe when the user signs out
+//         unsubscribe && unsubscribe();
+//     }
+// });
+
+
 let unsubscribe;
 
+// Helper function to get a local date string (YYYY-MM-DD) safely
+function getLocalDateString(dateObj) {
+  const year = dateObj.getFullYear();
+  const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+  const day = String(dateObj.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+// Get today's local date string (e.g., "2026-09-04")
+const currentPromptDateStr = getLocalDateString(new Date()); 
+
 auth.onAuthStateChanged(user => {
+  if (user) {
+    const inputOne = document.getElementById("question-answer-box-one");
+    const inputTwo = document.getElementById("question-answer-box-two");
+    const saveBtn = document.getElementById("saveBtn");
 
-    if (user) {
+    // Create a unique, predictable document ID for today (e.g., "USERID123_2026-09-04")
+    const todayDocId = `${user.uid}_${currentPromptDateStr}`;
+    
+    // Reference to this specific daily document
+    const docRef = doc(db, "journal", todayDocId);
 
-        // Database Reference
-        journalRef = db.collection('journal');
+    // 1. Handle Save Button Click (Overwrites existing or creates new)
+    saveBtn.addEventListener("click", async () => {
+      const answerOne = inputOne.value.trim();
+      const answerTwo = inputTwo.value.trim();
 
-        saveBtn.onclick = () => {
+      try {
+        // setDoc will overwrite the document if it already exists
+        await setDoc(docRef, {
+          uid: user.uid,
+          dateStr: currentPromptDateStr, // Storing string date for backup
+          questionAResponse: answerOne,
+          questionBResponse: answerTwo,
+          lastUpdated: serverTimestamp() 
+        }, { merge: true }); // merge: true ensures you don't accidentally wipe out other fields if added later
+        
+        console.log("Data successfully saved/overwritten!");
+        
+      } catch (error) {
+        console.error("Error saving document: ", error);
+      }
+    });
 
-            const { serverTimestamp } = firebase.firestore.FieldValue;
+    // 2. Set up the Realtime Single Document Listener
+    // No more complex query arrays, filters, or indexes required!
+    unsubscribe = onSnapshot(docRef, (docSnapshot) => {
+      if (docSnapshot.exists()) {
+        const data = docSnapshot.data();
+        
+        // Display the specific responses
+        inputOne.innerHTML = data.questionAResponse || "";
+        inputTwo.innerHTML = data.questionBResponse || "";
+      } else {
+        // Clear displays if no entry exists yet for today
+        inputOne.innerHTML = "";
+        inputTwo.innerHTML = "";
+      }
+    }, (error) => {
+      console.error("Listener failed: ", error);
+    });
 
-            journalRef.add({
-                uid: user.uid,
-                questionAResponse: askBoxTwo.innerHTML(),
-                questionBResponse: askBoxTwo.innerHTML(),
-                createdAt: serverTimestamp()
-            });
-        }
-
-
-        // Query
-        unsubscribe = journalRef
-            .where('uid', '==', user.uid)
-            .orderBy('createdAt') // Requires a query
-            .onSnapshot(querySnapshot => {
-                
-                // Map results to an array of li elements
-
-                const journalEntryA = querySnapshot.docs.map(doc => {
-
-                    return `${doc.data().questionAResponse}`
-
-                });
-                const journalEntryB = querySnapshot.docs.map(doc => {
-
-                    return `${doc.data().questionBResponse}`
-
-                });
-
-                askBoxOne.innerHTML = journalEntryA;
-                askBoxTwo.innerHTML = journalEntryB;
-
-            });
-
-
-
-    } else {
-        // Unsubscribe when the user signs out
-        unsubscribe && unsubscribe();
-    }
+  } else {
+    if (unsubscribe) unsubscribe();
+  }
 });
