@@ -126,15 +126,15 @@ async function getTodayPrompt() {
         const prayHeader = document.getElementById("pray-header");
         const prayBox = document.getElementById("pray-box");
 
-        dateHeader.textContent = docSnap.data().dateHeaderString;
-        readHeader.textContent = "Read";
+        dateHeader.innerHTML = docSnap.data().dateHeaderString;
+        readHeader.innerHTML = "Read";
         scripturePassage.innerHTML = todayPrompt.scripturePassage;
-        scriptureReference.textContent = todayPrompt.scriptureReference;
-        askHeader.textContent = "Ask";
-        askBoxOne.textContent = todayPrompt.questionA;
-        askBoxTwo.textContent = todayPrompt.questionB;
-        prayHeader.textContent = "Pray";
-        prayBox.textContent = todayPrompt.prayer;
+        scriptureReference.innerHTML = todayPrompt.scriptureReference;
+        askHeader.innerHTML = "Ask";
+        askBoxOne.innerHTML = todayPrompt.questionA;
+        askBoxTwo.innerHTML = todayPrompt.questionB;
+        prayHeader.innerHTML = "Pray";
+        prayBox.innerHTML = todayPrompt.prayer;
 
         console.log("Function updateTodayPage completed");
 
